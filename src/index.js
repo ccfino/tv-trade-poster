@@ -29,7 +29,7 @@ const DRY_RUN = process.argv.includes('--dry-run');
 
 function validateEnv() {
   if (DRY_RUN) return;
-  const required = ['INSTAGRAM_ACCOUNT_ID', 'META_ACCESS_TOKEN', 'IMAGE_SERVER_PUBLIC_URL'];
+  const required = ['INSTAGRAM_ACCOUNT_ID', 'META_ACCESS_TOKEN'];
   const missing = required.filter((k) => !process.env[k]);
   if (missing.length) {
     logger.error(`Missing required environment variables: ${missing.join(', ')}`);
@@ -72,7 +72,8 @@ async function main() {
 
   await startImageServer();
 
-  const dashPort = parseInt(process.env.DASHBOARD_PORT || '3501', 10);
+  // Render sets PORT; fall back to DASHBOARD_PORT or 3501 for local
+  const dashPort = parseInt(process.env.PORT || process.env.DASHBOARD_PORT || '3501', 10);
   dashboard.start(dashPort);
 
   const wsUrl = process.env.WEBSOCKET_URL || 'https://terminal.finosauras.com';

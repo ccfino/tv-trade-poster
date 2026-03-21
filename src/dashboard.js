@@ -91,6 +91,20 @@ function handleRequest(req, res) {
   }
 
   // ── API routes ──────────────────────────────────────────────────────────
+  if (pathname === '/api/dashboard') {
+    const rl = require('./rateLimiter').status();
+    const today = new Date().toDateString();
+    return jsonResponse(res, {
+      wsStatus,
+      queueSize,
+      posts:      posts.slice(0, 50),
+      logs:       logs.slice(0, 100),
+      postsToday: posts.filter(p => p.status === 'posted' && new Date(p.time).toDateString() === today).length,
+      totalPosts: posts.length,
+      igLimit:    rl,
+    });
+  }
+
   if (pathname === '/api/status') {
     const rl = require('./rateLimiter').status();
     return jsonResponse(res, {
