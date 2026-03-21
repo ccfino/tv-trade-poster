@@ -1,0 +1,1347 @@
+[2026-03-18 18:38:42] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:38:47] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:38:52] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:38:57] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:02] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:07] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:12] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:17] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:22] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:27] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:32] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:37] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:42] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:47] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:52] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:39:57] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 18:48:09] ERROR WebSocket error: Unexpected server response: 502
+[2026-03-18 18:48:12] ERROR WebSocket error: Unexpected server response: 502
+[2026-03-18 18:48:16] ERROR WebSocket error: Unexpected server response: 502
+[2026-03-18 18:55:03] ERROR WebSocket error: Unexpected server response: 502
+[2026-03-18 18:55:07] ERROR WebSocket error: Unexpected server response: 502
+[2026-03-18 18:55:11] ERROR WebSocket error: Unexpected server response: 502
+[2026-03-18 18:55:16] ERROR WebSocket error: Unexpected server response: 502
+[2026-03-18 19:02:14] ERROR Socket.IO connection error: server error
+[2026-03-18 19:02:16] ERROR Socket.IO connection error: server error
+[2026-03-18 19:02:18] ERROR Socket.IO connection error: server error
+[2026-03-18 19:02:26] ERROR Socket.IO connection error: server error
+[2026-03-18 19:02:40] ERROR Socket.IO connection error: server error
+[2026-03-18 19:03:05] ERROR Socket.IO connection error: server error
+[2026-03-18 19:04:05] ERROR Socket.IO connection error: server error
+[2026-03-18 19:05:05] ERROR Socket.IO connection error: server error
+[2026-03-18 19:05:22] ERROR Socket.IO connection error: server error
+[2026-03-18 19:05:25] ERROR Socket.IO connection error: server error
+[2026-03-18 19:05:27] ERROR Socket.IO connection error: server error
+[2026-03-18 19:05:34] ERROR Socket.IO connection error: server error
+[2026-03-18 19:05:45] ERROR Socket.IO connection error: server error
+[2026-03-18 19:06:10] ERROR Socket.IO connection error: server error
+[2026-03-18 19:07:10] ERROR Socket.IO connection error: server error
+[2026-03-18 19:08:10] ERROR Socket.IO connection error: server error
+[2026-03-18 19:10:23] ERROR Socket.IO connection error: server error
+[2026-03-18 19:10:24] ERROR Socket.IO connection error: server error
+[2026-03-18 19:10:30] ERROR Socket.IO connection error: server error
+[2026-03-18 19:10:39] ERROR Socket.IO connection error: server error
+[2026-03-18 19:10:52] ERROR Socket.IO connection error: server error
+[2026-03-18 19:11:55] ERROR Socket.IO connection error: server error
+[2026-03-18 19:11:57] ERROR Socket.IO connection error: server error
+[2026-03-18 19:12:02] ERROR Socket.IO connection error: server error
+[2026-03-18 19:12:54] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-18 19:12:59] ERROR ffmpeg error: Cannot find ffmpeg
+[2026-03-20 13:11:38] ERROR [eaglesproft11 | NIFTY2360024MAR26CE BUY] Image post failed: Request failed with status code 400
+[2026-03-20 13:11:48] ERROR [eaglesproft11 | NIFTY2360024MAR26CE BUY] Image post failed: Request failed with status code 400
+[2026-03-20 13:11:58] ERROR [chartians | BANKINDIA16030MAR26CE BUY] Image post failed: Request failed with status code 400
+[2026-03-20 13:12:08] ERROR [chartians | BANKINDIA16030MAR26CE BUY] Image post failed: Request failed with status code 400
+[2026-03-20 13:12:18] ERROR [chartians | BANKINDIA16030MAR26CE BUY] Image post failed: Request failed with status code 400
+[2026-03-20 13:13:28] ERROR [chartians | BANKINDIA16030MAR26CE BUY] Image post failed: Request failed with status code 400
+[2026-03-20 13:13:38] ERROR [chartians | BANKINDIA16030MAR26CE BUY] Image post failed: Request failed with status code 400
+[2026-03-20 13:13:48] ERROR [chartians | BANKINDIA16030MAR26CE BUY] Image post failed: Request failed with status code 400
+[2026-03-20 13:17:59] ERROR [jainamresearch | JINDALSTEL30MAR26 BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:18:49] ERROR [zee_business | CHENNPETRO BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:19:22] ERROR [mastertrustresearch | NIFTY2320024MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:20:46] ERROR [intraday_options | BAJAJFINSV172028APR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:20:56] ERROR [intraday_options | BAJAJFINSV172028APR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:21:06] ERROR [bankniftyking5 | BAJAJFINSV172030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:21:16] ERROR [bankniftyking5 | BAJAJFINSV172030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:21:42] ERROR [jainamresearch | APARINDS BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:22:08] ERROR [bankniftyking5 | BAJAJFINSV172030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:22:18] ERROR [bankniftyking5 | BAJAJFINSV172030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:22:40] ERROR [integratedresearchchannel | BPCL29530MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:24:00] ERROR [STOCKGAINERSS | MIRCELECTR BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:25:57] ERROR [icms1 | DRREDDY130030MAR26CE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:27:04] ERROR [prudentbroking | COALINDIA47030MAR26PE SELL] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:27:14] ERROR [prudentbroking | COALINDIA46030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:27:55] ERROR [tradingfabs | BANKNIFTY5150030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:28:05] ERROR [prudentbroking | COALINDIA46030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:28:15] ERROR [prudentbroking | COALINDIA47030MAR26PE SELL] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:28:24] ERROR [tradingfabs | BANKNIFTY5150030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:28:41] ERROR [STOCKGAINERSS | JBMA BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:28:51] ERROR [STOCKGAINERSS | CENTUM BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:29:01] ERROR [STOCKGAINERSS | JBMA BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:29:11] ERROR [STOCKGAINERSS | CENTUM BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:29:46] ERROR [Lakshmishree | HGINFRA BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:30:38] ERROR [cobbervipul | LAURUSLABS100030MAR26CE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:32:31] ERROR [indextradingnitin | NIFTY2270024MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:35:37] ERROR [prudentbroking | COALINDIA BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:37:28] ERROR [STOCKGAINERSS | JBMA BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:38:55] ERROR [zee_business | TATASTEEL BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:39:08] ERROR [STOCKGAINERSS | QPOWER BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:45:28] ERROR [icms1 | TORNTPHARM28APR26 BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:46:14] ERROR [zee_business | FEDERALBNK BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:46:50] ERROR [icms1 | NIFTY2325024MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:47:02] ERROR [Motilal Oswal Financial Services | MRF SELL] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:47:28] ERROR [bullllmarrrk | NIFTY30MAR26 BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:47:38] ERROR [bullllmarrrk | NIFTY2320024MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:47:48] ERROR [bullllmarrrk | WIPRO BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:48:40] ERROR [zee_business | JSWENERGY BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:49:40] ERROR Socket.IO connection error: websocket error
+[2026-03-20 13:49:46] ERROR Socket.IO connection error: websocket error
+[2026-03-20 13:49:53] ERROR Socket.IO connection error: websocket error
+[2026-03-20 13:50:15] ERROR Socket.IO connection error: websocket error
+[2026-03-20 13:50:53] ERROR Socket.IO connection error: websocket error
+[2026-03-20 13:51:44] ERROR Socket.IO connection error: websocket error
+[2026-03-20 13:53:57] ERROR [indexoption31 | NIFTY2310024MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 13:55:58] ERROR [nirmalbangofficial | AUROPHARMA30MAR26 SELL] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 14:26:46] ERROR [cnbc_awaaz | INDIANB BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 14:27:33] ERROR [sislofficial | BANKNIFTY5300030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 14:27:43] ERROR [sislofficial | BANKNIFTY5300030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 14:27:53] ERROR [sislofficial | BANKNIFTY5300030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 14:28:05] ERROR [sislofficial | NIFTY2250030MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:79:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:46:3
+[2026-03-20 14:32:24] ERROR [ndtv_profit | J&KBANK BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 14:32:34] ERROR [ndtv_profit | J&KBANK BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 14:33:14] ERROR [cnbc_awaaz | PRESTIGE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 14:38:05] ERROR [zee_business | PARACABLES BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 14:38:33] ERROR [zee_business | PARACABLES BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 14:40:12] ERROR [cnbc_awaaz | GNFC BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 14:43:59] ERROR [cnbc_awaaz | SBIN BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 14:45:22] ERROR [zee_business | NIFTY2270024MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 14:45:32] ERROR [zee_business | NIFTY2270024MAR26PE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:00:40] ERROR [zee_business | COROMANDEL BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:00:50] ERROR [zee_business | COROMANDEL BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:01:00] ERROR [cnbc_awaaz | GAIL BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:59:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:06:57] ERROR [zee_business | PIXTRANS BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:07:20] ERROR [zee_business | PIXTRANS BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:09:10] ERROR [zee_business | PIXTRANS BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:10:50] ERROR [zee_business | DLF BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:11:00] ERROR [zee_business | DLF BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:11:11] ERROR [zee_business | DLF BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:13:48] ERROR [cnbc_awaaz | PREMIERENE30MAR26 BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:13:58] ERROR [cnbc_awaaz | PREMIERENE30MAR26 BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:17:34] ERROR [zee_business | IRFC30MAR26 SELL] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:17:44] ERROR [zee_business | IRFC30MAR26 SELL] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:17:58] ERROR [zee_business | IRFC30MAR26 SELL] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:18:10] ERROR [zee_business | IRFC30MAR26 SELL] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:22:50] ERROR [zee_business | KSB BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:23:00] ERROR [zee_business | KSB BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:23:10] ERROR [zee_business | NIFTY2450024MAR26CE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:23:20] ERROR [zee_business | NIFTY24500CE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:23:30] ERROR [zee_business | NIFTY2450024MAR26CE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:23:40] ERROR [zee_business | NIFTY BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:23:49] ERROR [zee_business | NIFTY BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:23:59] ERROR [zee_business | NIFTY BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:24:09] ERROR [zee_business | NIFTY BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:24:19] ERROR [zee_business | NIFTY2450024MAR26CE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:24:29] ERROR [zee_business | NIFTY2450024MAR26CE BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:24:39] ERROR [zee_business | NIFTY BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:24:49] ERROR [zee_business | NIFTY BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:25:53] ERROR [cnbc_awaaz | ADANIENT BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at BrotliDecompress.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at BrotliDecompress.emit (node:events:508:28)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:29:24] ERROR [cnbc_awaaz | DEEPAKNTR BUY] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 15:29:58] ERROR [zee_business | TITAN30MAR26 SELL] Pipeline error: Request failed with status code 400 Request failed with status code 400
+AxiosError: Request failed with status code 400
+    at settle (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:2304:7)
+    at IncomingMessage.handleStreamEnd (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:3772:13)
+    at IncomingMessage.emit (node:events:520:35)
+    at endReadableNT (node:internal/streams/readable:1701:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+    at Axios.request (/Users/chang/tv-trade-poster/node_modules/axios/dist/node/axios.cjs:5110:41)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async apiPost (/Users/chang/tv-trade-poster/src/instagramApi.js:26:20)
+    at async createPhotoContainer (/Users/chang/tv-trade-poster/src/instagramApi.js:51:16)
+    at async retryWithBackoff.label (/Users/chang/tv-trade-poster/src/instagramApi.js:119:25)
+    at async retryWithBackoff (/Users/chang/tv-trade-poster/src/utils.js:76:14)
+    at async processRecommendation (/Users/chang/tv-trade-poster/src/pipeline.js:64:22)
+    at async /Users/chang/tv-trade-poster/src/index.js:47:3
+[2026-03-20 20:37:25] ERROR Socket.IO connection error: websocket error
+[2026-03-21 00:40:38] ERROR Socket.IO connection error: timeout
+[2026-03-21 10:11:57] ERROR Socket.IO connection error: websocket error
+[2026-03-21 10:53:58] ERROR Socket.IO connection error: websocket error
+[2026-03-21 10:54:00] ERROR Socket.IO connection error: websocket error
+[2026-03-21 11:16:55] ERROR Socket.IO connection error: websocket error
+[2026-03-21 11:16:58] ERROR Socket.IO connection error: websocket error
+[2026-03-21 11:21:22] ERROR Socket.IO connection error: websocket error
+[2026-03-21 11:23:36] ERROR Socket.IO connection error: websocket error

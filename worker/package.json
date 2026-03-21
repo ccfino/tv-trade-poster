@@ -1,0 +1,11 @@
+{
+  "name": "tv-trade-poster-worker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": { "start": "node index.js" },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "node-fetch": "^2.6.7",
+    "socket.io-client": "^4.7.0"
+  }
+}

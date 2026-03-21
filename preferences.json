@@ -1,0 +1,16 @@
+{
+  "tradeTypes": {
+    "equity": true,
+    "indexOption": false,
+    "stockOption": false,
+    "indexFuture": false,
+    "stockFuture": false
+  },
+  "postToFeed": true,
+  "postToStory": true,
+  "channels": [
+    "zeebusiness",
+    "cnbcawaaz",
+    "ndtvprofit"
+  ]
+}
