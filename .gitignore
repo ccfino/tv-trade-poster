@@ -1,0 +1,14 @@
+node_modules/
+web/node_modules/
+worker/node_modules/
+.env
+.env.local
+.env.*.local
+web/.env.local
+output/temp/
+logs/
+*.log
+preferences.json
+posts_history.json
+.DS_Store
+.next/
