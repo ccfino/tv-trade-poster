@@ -1,0 +1,16 @@
+node_modules
+web
+nginx
+.git
+.env
+.env.local
+.env.*.local
+output/temp/*
+logs/*
+*.log
+.DS_Store
+.next
+render.yaml
+README.md
+test-mock.js
+posts_history.json

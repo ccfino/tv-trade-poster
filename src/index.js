@@ -72,7 +72,6 @@ async function main() {
 
   await startImageServer();
 
-  // Render sets PORT; fall back to DASHBOARD_PORT or 3501 for local
   const dashPort = parseInt(process.env.PORT || process.env.DASHBOARD_PORT || '3501', 10);
   dashboard.start(dashPort);
 
