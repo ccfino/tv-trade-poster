@@ -221,14 +221,27 @@ function drawHeroSection(ctx, W, topY, rec) {
 
 /** Draw the price info card (Entry / Target(s) / Stop Loss) */
 function drawPriceCard(ctx, W, topY, rec, paddingX = 60) {
-  const { entry, target, stopLoss } = rec;
+  const { entry, target, stopLoss, exitPrice, exitReason, isClosed, returnPct } = rec;
   const targetsArr = Array.isArray(target) ? target : target ? [target] : [];
 
   const rows = [];
-  if (entry !== undefined && entry !== null)  rows.push({ label: 'ENTRY',     value: formatPrice(entry),            color: COLORS.white });
-  for (let i = 0; i < targetsArr.length; i++) {
-    const label = targetsArr.length === 1 ? 'TARGET' : `TARGET ${i + 1}`;
-    rows.push({ label, value: formatPrice(targetsArr[i]), color: '#00E676' });
+  if (entry !== undefined && entry !== null) rows.push({ label: 'ENTRY', value: formatPrice(entry), color: COLORS.white });
+
+  if (isClosed && exitPrice != null) {
+    // For closed trades show exit price instead of / in addition to target
+    const isTarget = exitReason === 'TARGET_HIT';
+    const exitLabel = isTarget ? 'EXIT (TARGET)' : 'EXIT (SL HIT)';
+    const exitColor = isTarget ? '#00E676' : '#FF1744';
+    rows.push({ label: exitLabel, value: formatPrice(exitPrice), color: exitColor });
+    if (returnPct !== null && returnPct !== undefined) {
+      const sign = returnPct >= 0 ? '+' : '';
+      rows.push({ label: 'RETURN', value: `${sign}${returnPct.toFixed(2)}%`, color: returnPct >= 0 ? '#00E676' : '#FF1744' });
+    }
+  } else {
+    for (let i = 0; i < targetsArr.length; i++) {
+      const label = targetsArr.length === 1 ? 'TARGET' : `TARGET ${i + 1}`;
+      rows.push({ label, value: formatPrice(targetsArr[i]), color: '#00E676' });
+    }
   }
   if (stopLoss !== undefined && stopLoss !== null) rows.push({ label: 'STOP LOSS', value: formatPrice(stopLoss), color: '#FF6B6B' });
 
@@ -290,6 +303,49 @@ function drawWatermark(ctx, W, H) {
   ctx.fillRect(W / 2 - 120, H - 16, 240, 2);
 }
 
+/**
+ * Draw a prominent outcome banner for closed trades (TARGET HIT / STOP LOSS HIT).
+ * Placed below the header bar.
+ */
+function drawOutcomeBanner(ctx, W, rec) {
+  if (!rec.isClosed || !rec.exitReason) return;
+
+  const isTarget  = rec.exitReason === 'TARGET_HIT';
+  const isSL      = rec.exitReason === 'SL_HIT';
+  if (!isTarget && !isSL) return;
+
+  const text        = isTarget ? '🎯  TARGET HIT' : '🛑  STOP LOSS HIT';
+  const bgColor     = isTarget ? 'rgba(0,230,118,0.18)' : 'rgba(255,23,68,0.18)';
+  const borderColor = isTarget ? '#00E676'              : '#FF1744';
+  const textColor   = isTarget ? '#00E676'              : '#FF5252';
+
+  const BANNER_H = 52;
+  const BANNER_Y = 80;   // right below header bar
+
+  // Background
+  ctx.fillStyle = bgColor;
+  ctx.fillRect(0, BANNER_Y, W, BANNER_H);
+
+  // Top & bottom borders
+  ctx.fillStyle = borderColor;
+  ctx.fillRect(0, BANNER_Y, W, 2);
+  ctx.fillRect(0, BANNER_Y + BANNER_H - 2, W, 2);
+
+  // Text
+  ctx.font = FONT.bold(28);
+  ctx.fillStyle = textColor;
+  ctx.textAlign = 'center';
+  ctx.fillText(text, W / 2, BANNER_Y + 36);
+
+  // Return % if available
+  if (rec.returnPct !== undefined && rec.returnPct !== null) {
+    const sign = rec.returnPct >= 0 ? '+' : '';
+    ctx.font = FONT.semi(18);
+    ctx.fillStyle = textColor;
+    ctx.fillText(`${sign}${rec.returnPct.toFixed(2)}%`, W / 2, BANNER_Y + 58);
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Template B — No TV frame (full card design)
 // ---------------------------------------------------------------------------
@@ -300,8 +356,14 @@ async function renderTemplateB(rec, W, H) {
   drawBackground(ctx, W, H);
   drawCornerAccents(ctx, W, H);
   drawHeaderBar(ctx, W, rec);
+  drawOutcomeBanner(ctx, W, rec);
 
-  const heroBottom = drawHeroSection(ctx, W, 104, rec);
+  // Shift hero down if outcome banner is shown
+  const contentTop = (rec.isClosed && (rec.exitReason === 'TARGET_HIT' || rec.exitReason === 'SL_HIT'))
+    ? 150  // header (80) + banner (52) + gap (18)
+    : 104;
+
+  const heroBottom = drawHeroSection(ctx, W, contentTop, rec);
   drawPriceCard(ctx, W, heroBottom + 16, rec);
   drawWatermark(ctx, W, H);
 
@@ -327,14 +389,18 @@ async function renderTemplateA(rec, tvFramePath, W, H) {
   drawBackground(ctx, W, H);
   drawCornerAccents(ctx, W, H);
   drawHeaderBar(ctx, W, rec);
+  drawOutcomeBanner(ctx, W, rec);
+
+  const hasBanner = rec.isClosed && (rec.exitReason === 'TARGET_HIT' || rec.exitReason === 'SL_HIT');
+  const contentTopY = hasBanner ? 142 : 100;
 
   const isSquare = W === H; // 1080x1080
 
   if (isSquare) {
     // Left half: TV frame | Right half: price card
     const SPLIT = Math.floor(W * 0.52);
-    const frameX = 30, frameY = 100;
-    const frameW = SPLIT - 50, frameH = H - 180;
+    const frameX = 30, frameY = contentTopY;
+    const frameW = SPLIT - 50, frameH = H - contentTopY - 80;
 
     // TV frame with glow border
     try {
@@ -361,15 +427,14 @@ async function renderTemplateA(rec, tvFramePath, W, H) {
 
     // Right side
     const rightX = SPLIT + 10;
-    const rightW = W - rightX - 20;
-    const heroBottom = drawHeroSection(ctx, W, 104, rec); // drawn centered but we'll redo for right col
+    const heroBottom = drawHeroSection(ctx, W, contentTopY + 4, rec);
     // Re-draw just the price card on right side
     drawPriceCard(ctx, W, heroBottom + 8, rec, rightX);
 
   } else {
     // Reel (1080x1920): TV frame in top third, price card below
-    const frameH = Math.floor(H * 0.38);
-    const frameX = 40, frameY = 100;
+    const frameH = Math.floor(H * 0.35);
+    const frameX = 40, frameY = contentTopY;
     const frameW = W - 80;
 
     try {
@@ -388,7 +453,7 @@ async function renderTemplateA(rec, tvFramePath, W, H) {
       fillRoundRect(ctx, frameX, frameY, frameW, frameH, 14, 'rgba(255,255,255,0.04)');
     }
 
-    const heroBottom = drawHeroSection(ctx, W, frameY + frameH + 20, rec);
+    const heroBottom = drawHeroSection(ctx, W, frameY + frameH + 24, rec);
     drawPriceCard(ctx, W, heroBottom + 12, rec);
   }
 

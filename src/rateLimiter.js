@@ -19,6 +19,9 @@ const DAILY_LIMIT = parseInt(process.env.IG_DAILY_POST_LIMIT || '25', 10);
 // Timestamps (ms) of each post made within the current window
 const postTimestamps = [];
 
+// Timestamps for story posts (separate from feed posts)
+const storyTimestamps = [];
+
 /**
  * Evict timestamps older than 24 hours.
  */
@@ -74,4 +77,53 @@ function status() {
   return { used, limit: DAILY_LIMIT, remaining: DAILY_LIMIT - used };
 }
 
-module.exports = { canPost, recordPost, status };
+// ── Story limiter ─────────────────────────────────────────────────────────────
+
+/**
+ * Evict story timestamps older than the current calendar day.
+ */
+function evictOldStories() {
+  const startOfDay = new Date();
+  startOfDay.setHours(0, 0, 0, 0);
+  const cutoff = startOfDay.getTime();
+  while (storyTimestamps.length && storyTimestamps[0] < cutoff) {
+    storyTimestamps.shift();
+  }
+}
+
+/** How many stories have been posted today. */
+function storiesPostedToday() {
+  evictOldStories();
+  return storyTimestamps.length;
+}
+
+/**
+ * Returns true if we can post another story today.
+ * @param {number} maxPerDay  - daily story limit from preferences
+ */
+function canPostStory(maxPerDay) {
+  const used = storiesPostedToday();
+  if (used >= maxPerDay) {
+    logger.warn(
+      `Instagram story daily limit reached (${used}/${maxPerDay} stories today). ` +
+      `Resets at midnight.`
+    );
+    return false;
+  }
+  return true;
+}
+
+/** Record a successfully published story. */
+function recordStory() {
+  evictOldStories();
+  storyTimestamps.push(Date.now());
+  logger.info(`Stories today: ${storyTimestamps.length}`);
+}
+
+/** Story status for the dashboard. */
+function storyStatus(maxPerDay) {
+  const used = storiesPostedToday();
+  return { used, limit: maxPerDay, remaining: Math.max(0, maxPerDay - used) };
+}
+
+module.exports = { canPost, recordPost, status, canPostStory, recordStory, storyStatus };

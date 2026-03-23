@@ -778,6 +778,19 @@ body {
 .pref-msg.hidden  { display:none; }
 .btn-save-prefs { width:100%; background:var(--accent); color:#000; border:none; padding:11px; border-radius:8px; font-size:13px; font-weight:800; cursor:pointer; transition:opacity 0.2s; margin-top:4px; font-family:var(--font); }
 .btn-save-prefs:hover { opacity:0.88; }
+.freq-row { display:flex; align-items:center; gap:10px; margin-top:12px; }
+.freq-row label { font-size:11px; color:var(--dim); white-space:nowrap; }
+.freq-row input[type=number] { width:72px; background:var(--bg); border:1px solid var(--border2); color:var(--white); padding:6px 10px; border-radius:7px; font-size:13px; text-align:center; outline:none; font-family:var(--font); }
+.freq-row input[type=number]:focus { border-color:rgba(240,180,41,0.5); }
+.freq-row select { background:var(--bg); border:1px solid var(--border2); color:var(--white); padding:6px 10px; border-radius:7px; font-size:12px; outline:none; font-family:var(--font); appearance:none; cursor:pointer; }
+.freq-row select:focus { border-color:rgba(240,180,41,0.5); }
+
+/* Caption block inside feed cards */
+.caption-block { margin-top:10px; }
+.caption-toggle { background:none; border:1px solid var(--border2); color:var(--dimmer); font-size:10px; font-family:var(--font); padding:3px 9px; border-radius:5px; cursor:pointer; transition:all 0.2s; }
+.caption-toggle:hover { color:var(--dim); border-color:rgba(255,255,255,0.15); }
+.caption-text { display:none; margin-top:7px; background:rgba(255,255,255,0.03); border:1px solid var(--border2); border-radius:7px; padding:10px 12px; font-size:11px; color:var(--dim); white-space:pre-wrap; line-height:1.6; word-break:break-word; }
+.caption-text.open { display:block; }
 </style>
 </head>
 <body>
@@ -908,6 +921,39 @@ body {
   <div id="pane-preferences" class="tab-pane">
     <div style="max-width:700px">
 
+      <!-- ── Trade Outcome Filter ─────────────────────────────────── -->
+      <div class="pref-section">
+        <div class="pref-section-title">Trade Outcome Filter</div>
+        <div class="pref-section-desc">Control which closed trades trigger a post. Open trades are never posted.</div>
+        <div class="toggle-row">
+          <div>
+            <div class="toggle-label">Only post closed trades</div>
+            <div class="toggle-sublabel">Never post new/open trade recommendations — only post when target or SL is hit</div>
+          </div>
+          <label class="toggle-switch"><input type="checkbox" id="pref_onlyClosedTrades"><span class="toggle-slider"></span></label>
+        </div>
+        <div id="exitReasonSection" style="margin-top:12px">
+          <div class="pref-section-desc" style="margin-bottom:8px">Select which outcomes to post:</div>
+          <div class="pref-check-grid">
+            <label class="pref-check-item">
+              <input type="checkbox" id="pref_targetHit">
+              <div class="pref-check-label">
+                <span>✅ Target Hit</span>
+                <small>Post when trade reaches profit target</small>
+              </div>
+            </label>
+            <label class="pref-check-item">
+              <input type="checkbox" id="pref_slHit">
+              <div class="pref-check-label">
+                <span>🛑 Stop Loss Hit</span>
+                <small>Post when trade hits stop loss</small>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Trade Type Filters ──────────────────────────────────── -->
       <div class="pref-section">
         <div class="pref-section-title">Trade Type Filters</div>
         <div class="pref-section-desc">Only trades matching selected types will be posted to Instagram</div>
@@ -920,6 +966,7 @@ body {
         </div>
       </div>
 
+      <!-- ── Posting Options ─────────────────────────────────────── -->
       <div class="pref-section">
         <div class="pref-section-title">Posting Options</div>
         <div>
@@ -928,12 +975,44 @@ body {
             <label class="toggle-switch"><input type="checkbox" id="pref_postToFeed"><span class="toggle-slider"></span></label>
           </div>
           <div class="toggle-row">
-            <div><div class="toggle-label">Post as Story</div><div class="toggle-sublabel">Also publish as an Instagram Story (24-hour)</div></div>
+            <div><div class="toggle-label">Post as Story</div><div class="toggle-sublabel">Also publish as an Instagram Story (24-hour). Image includes TARGET HIT / STOP LOSS HIT banner.</div></div>
             <label class="toggle-switch"><input type="checkbox" id="pref_postToStory"><span class="toggle-slider"></span></label>
           </div>
         </div>
       </div>
 
+      <!-- ── Posting Frequency ───────────────────────────────────── -->
+      <div class="pref-section">
+        <div class="pref-section-title">Posting Frequency (Feed Posts)</div>
+        <div class="pref-section-desc">Throttle how often feed posts are published. Stories are not affected by this cap.</div>
+        <div class="toggle-row">
+          <div><div class="toggle-label">Enable frequency cap</div><div class="toggle-sublabel">Limit how many feed posts go out per time period</div></div>
+          <label class="toggle-switch"><input type="checkbox" id="pref_freqEnabled"><span class="toggle-slider"></span></label>
+        </div>
+        <div class="freq-row" id="freqControls" style="margin-top:14px">
+          <label>Max posts:</label>
+          <input type="number" id="pref_freqMaxPosts" min="1" max="100" value="1">
+          <label>per</label>
+          <select id="pref_freqPerUnit">
+            <option value="minute">Minute</option>
+            <option value="hour" selected>Hour</option>
+            <option value="day">Day</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- ── Story Daily Limit ───────────────────────────────────── -->
+      <div class="pref-section">
+        <div class="pref-section-title">Story Daily Limit</div>
+        <div class="pref-section-desc">Maximum number of Instagram Stories to post per calendar day. Resets at midnight.</div>
+        <div class="freq-row">
+          <label>Max stories per day:</label>
+          <input type="number" id="pref_maxStoriesPerDay" min="1" max="100" value="20">
+        </div>
+        <div style="font-size:11px;color:var(--dimmer);margin-top:8px">Recommended: 20 or fewer to avoid Instagram rate limiting on stories.</div>
+      </div>
+
+      <!-- ── Channel Allowlist ───────────────────────────────────── -->
       <div class="pref-section">
         <div class="pref-section-title">Channel Allowlist</div>
         <div class="pref-section-desc">Only trades from these TV channels will be posted</div>
@@ -1258,12 +1337,23 @@ function buildCardHTML(entry) {
     ? `<img class="rec-thumb" src="${esc(entry.postImageUrl)}" alt="" onclick="openLightbox('${esc(entry.postImageUrl)}')">`
     : `<div class="thumb-placeholder">Generating…</div>`;
 
+  // Outcome badge for closed trades
+  const exitBadge = rec.exitReason
+    ? `<span class="status-pill" style="background:${rec.exitReason==='TARGET_HIT'?'rgba(0,230,118,0.12)':'rgba(255,23,68,0.12)'};color:${rec.exitReason==='TARGET_HIT'?'var(--buy)':'var(--sell)'}">${rec.exitReason==='TARGET_HIT'?'✅ TARGET HIT':'🛑 SL HIT'}</span>`
+    : '';
+
+  // Caption section
+  const captionHtml = entry.caption
+    ? `<div class="caption-block"><button class="caption-toggle" onclick="toggleCaption(this)">📝 View Caption</button><pre class="caption-text">${esc(entry.caption)}</pre></div>`
+    : `<div class="caption-block" data-caption-pending="1"></div>`;
+
   return `
 <div class="rec-card s-${status}" id="${domId(entry)}">
   <div class="rec-top">
     <span class="ch-badge">${esc(rec.channel || 'Unknown')}</span>
     <span class="action-pill ${isBuy ? 'buy' : 'sell'}">${esc(rec.action || '?')}</span>
     ${rec.type ? `<span class="type-pill">${esc(rec.type.toUpperCase())}</span>` : ''}
+    ${exitBadge}
     <span class="status-pill ${status}">${statusLabel(status)}</span>
   </div>
   <div class="rec-body">
@@ -1275,8 +1365,8 @@ function buildCardHTML(entry) {
           <div class="price-val">₹${fmtPrice(rec.entry)}</div>
         </div>
         <div class="price-cell target">
-          <div class="price-label">Target</div>
-          <div class="price-val">₹${fmtPrice(rec.target)}</div>
+          <div class="price-label">${rec.exitReason === 'TARGET_HIT' ? 'Exit (Target)' : rec.exitReason === 'SL_HIT' ? 'Exit (SL Hit)' : 'Target'}</div>
+          <div class="price-val">₹${fmtPrice(rec.exitPrice != null ? rec.exitPrice : rec.target)}</div>
         </div>
         <div class="price-cell sl">
           <div class="price-label">Stop Loss</div>
@@ -1286,8 +1376,10 @@ function buildCardHTML(entry) {
     </div>
     ${imgHtml}
   </div>
+  ${captionHtml}
   <div class="rec-footer">
     ${rec.analyst ? `<span class="analyst">👤 ${esc(rec.analyst)}</span>` : ''}
+    ${rec.returnPct != null ? `<span style="color:${rec.returnPct>=0?'var(--buy)':'var(--sell)'}">Return: ${rec.returnPct>=0?'+':''}${Number(rec.returnPct).toFixed(2)}%</span>` : ''}
     <span class="time">${fmtTime(entry.time)}</span>
   </div>
 </div>`;
@@ -1297,7 +1389,9 @@ function patchCard(el, entry) {
   const status = entry.status || 'queued';
   el.className = `rec-card s-${status}`;
 
-  const badge = el.querySelector('.status-pill');
+  // Update status pill (last one in .rec-top)
+  const pills = el.querySelectorAll('.status-pill');
+  const badge = pills[pills.length - 1];
   if (badge) { badge.className = `status-pill ${status}`; badge.textContent = statusLabel(status); }
 
   if (entry.postImageUrl) {
@@ -1306,6 +1400,20 @@ function patchCard(el, entry) {
     const html = `<img class="rec-thumb" src="${esc(entry.postImageUrl)}" alt="" onclick="openLightbox('${esc(entry.postImageUrl)}')">`;
     if (ph) ph.outerHTML = html;
     else if (!img) el.querySelector('.rec-body')?.insertAdjacentHTML('beforeend', html);
+  }
+
+  // Update caption if available
+  if (entry.caption) {
+    const captionBlock = el.querySelector('.caption-block');
+    if (captionBlock) {
+      const existing = captionBlock.querySelector('.caption-text');
+      if (existing) {
+        existing.textContent = entry.caption;
+      } else {
+        // Replace pending placeholder
+        captionBlock.innerHTML = `<button class="caption-toggle" onclick="toggleCaption(this)">📝 View Caption</button><pre class="caption-text">${esc(entry.caption)}</pre>`;
+      }
+    }
   }
 }
 
@@ -1542,10 +1650,31 @@ function applyPrefs(prefs) {
     const el = document.getElementById('pref_' + t);
     if (el) el.checked = prefs.tradeTypes?.[t] !== false;
   });
+
   const feedEl = document.getElementById('pref_postToFeed');
   if (feedEl) feedEl.checked = prefs.postToFeed !== false;
   const storyEl = document.getElementById('pref_postToStory');
   if (storyEl) storyEl.checked = prefs.postToStory === true;
+
+  // Outcome filter
+  const onlyClosedEl = document.getElementById('pref_onlyClosedTrades');
+  if (onlyClosedEl) onlyClosedEl.checked = prefs.onlyClosedTrades !== false;
+  const tgtEl = document.getElementById('pref_targetHit');
+  if (tgtEl) tgtEl.checked = prefs.exitReasonFilter?.targetHit !== false;
+  const slEl = document.getElementById('pref_slHit');
+  if (slEl) slEl.checked = prefs.exitReasonFilter?.slHit !== false;
+
+  // Posting frequency
+  const freqEnabledEl = document.getElementById('pref_freqEnabled');
+  if (freqEnabledEl) freqEnabledEl.checked = prefs.postingFrequency?.enabled === true;
+  const freqMaxEl = document.getElementById('pref_freqMaxPosts');
+  if (freqMaxEl) freqMaxEl.value = prefs.postingFrequency?.maxPosts ?? 1;
+  const freqUnitEl = document.getElementById('pref_freqPerUnit');
+  if (freqUnitEl) freqUnitEl.value = prefs.postingFrequency?.perUnit ?? 'hour';
+
+  // Story daily limit
+  const maxStoriesEl = document.getElementById('pref_maxStoriesPerDay');
+  if (maxStoriesEl) maxStoriesEl.value = prefs.maxStoriesPerDay ?? 20;
 
   channelList.length = 0;
   (prefs.channels || []).forEach(c => channelList.push(c));
@@ -1591,6 +1720,18 @@ document.getElementById('savePrefsBtn')?.addEventListener('click', async () => {
     postToFeed:  document.getElementById('pref_postToFeed')?.checked,
     postToStory: document.getElementById('pref_postToStory')?.checked,
     channels: [...channelList],
+
+    onlyClosedTrades: document.getElementById('pref_onlyClosedTrades')?.checked,
+    exitReasonFilter: {
+      targetHit: document.getElementById('pref_targetHit')?.checked,
+      slHit:     document.getElementById('pref_slHit')?.checked,
+    },
+    postingFrequency: {
+      enabled:  document.getElementById('pref_freqEnabled')?.checked,
+      maxPosts: parseInt(document.getElementById('pref_freqMaxPosts')?.value || '1', 10),
+      perUnit:  document.getElementById('pref_freqPerUnit')?.value || 'hour',
+    },
+    maxStoriesPerDay: parseInt(document.getElementById('pref_maxStoriesPerDay')?.value || '20', 10),
   };
   try {
     const r = await fetch('/api/preferences', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(prefs) });
@@ -1604,6 +1745,14 @@ function showPrefsMsg(type, msg) {
   el.className = 'pref-msg ' + type;
   el.textContent = msg;
   setTimeout(() => el.className = 'pref-msg hidden', 4000);
+}
+
+// ── Caption toggle ─────────────────────────────────────────────────────────
+function toggleCaption(btn) {
+  const text = btn.nextElementSibling;
+  if (!text) return;
+  const isOpen = text.classList.toggle('open');
+  btn.textContent = isOpen ? '📝 Hide Caption' : '📝 View Caption';
 }
 
 // ── Performance ────────────────────────────────────────────────────────────

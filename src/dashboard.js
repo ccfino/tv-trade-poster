@@ -268,6 +268,14 @@ function start(port = 3501) {
     io.emit('queue_size', queueSize);
   });
 
+  appEvents.on('caption_ready', ({ stock, caption }) => {
+    const entry = posts.find((p) => p.rec?.stock === stock && p.status === 'queued');
+    if (entry) {
+      entry.caption = caption;
+      io.emit('post_update', entry);
+    }
+  });
+
   appEvents.on('processing_start', ({ stock }) => {
     const entry = posts.find((p) => p.rec?.stock === stock && p.status === 'queued');
     if (entry) {
@@ -278,21 +286,23 @@ function start(port = 3501) {
     io.emit('queue_size', queueSize);
   });
 
-  appEvents.on('images_generated', ({ stock, postPath, reelPath }) => {
+  appEvents.on('images_generated', ({ stock, postPath, reelPath, caption }) => {
     const entry = posts.find((p) => p.rec?.stock === stock && p.status === 'processing');
     if (entry) {
       entry.postPath = postPath;
       entry.reelPath = reelPath;
       entry.postImageUrl = postPath.startsWith('http') ? postPath : `/images/${path.basename(postPath)}`;
+      if (caption) entry.caption = caption;
       io.emit('post_update', entry);
     }
   });
 
-  appEvents.on('post_success', ({ stock, postId }) => {
+  appEvents.on('post_success', ({ stock, postId, caption }) => {
     const entry = posts.find((p) => p.rec?.stock === stock && p.status === 'processing');
     if (entry) {
       entry.status = 'posted';
       entry.postId = postId;
+      if (caption) entry.caption = caption;
       io.emit('post_update', entry);
     }
   });
@@ -306,13 +316,14 @@ function start(port = 3501) {
     }
   });
 
-  appEvents.on('dry_run', ({ stock, postPath, reelPath }) => {
+  appEvents.on('dry_run', ({ stock, postPath, reelPath, caption }) => {
     const entry = posts.find((p) => p.rec?.stock === stock && p.status === 'processing');
     if (entry) {
       entry.status = 'dry_run';
       entry.postPath = postPath;
       entry.reelPath = reelPath;
       entry.postImageUrl = postPath.startsWith('http') ? postPath : `/images/${path.basename(postPath)}`;
+      if (caption) entry.caption = caption;
       io.emit('post_update', entry);
     }
   });

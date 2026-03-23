@@ -12,9 +12,28 @@ const DEFAULTS = {
     indexFuture: true,
     stockFuture: true,
   },
-  postToFeed:  true,
-  postToStory: false,
-  channels: ['zeebusiness', 'cnbcawaaz', 'ndtvprofit'],
+  postToFeed:    true,
+  postToStory:   false,
+  channels:      ['zeebusiness', 'cnbcawaaz', 'ndtvprofit'],
+
+  // Only post closed trades (target hit / stop loss hit) — never open trades
+  onlyClosedTrades: true,
+
+  // Which exit reasons to post
+  exitReasonFilter: {
+    targetHit: true,
+    slHit:     true,
+  },
+
+  // Posting frequency cap (for feed posts)
+  postingFrequency: {
+    enabled:  false,
+    maxPosts: 1,
+    perUnit:  'hour',   // 'minute' | 'hour' | 'day'
+  },
+
+  // Max Instagram Stories per calendar day
+  maxStoriesPerDay: 20,
 };
 
 function load() {
