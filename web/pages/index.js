@@ -405,8 +405,20 @@ export default function Dashboard() {
         .rec-thumb { width:76px; height:76px; border-radius:7px; object-fit:cover; border:1px solid var(--border2); cursor:pointer; flex-shrink:0; transition:transform 0.2s,border-color 0.2s; background:var(--bg3); }
         .rec-thumb:hover { transform:scale(1.04); border-color:var(--border); }
         .thumb-placeholder { width:76px; height:76px; border-radius:7px; border:1px dashed var(--border2); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:9px; color:var(--dimmer); background:var(--bg3); }
-        .rec-footer { margin-top:10px; display:flex; align-items:center; gap:8px; font-size:11px; color:var(--dimmer); }
+        .rec-footer { margin-top:10px; display:flex; align-items:center; gap:8px; font-size:11px; color:var(--dimmer); flex-wrap:wrap; }
         .rec-footer .time { margin-left:auto; }
+        .rec-footer .analyst { font-weight:600; color:var(--dim); }
+
+        /* Caption block inside feed cards */
+        .caption-block { margin-top:10px; border-top:1px solid var(--border2); padding-top:8px; }
+        .caption-toggle { background:none; border:1px solid var(--border2); border-radius:6px; color:var(--dim); font-size:11px; padding:4px 10px; cursor:pointer; transition:all 0.2s; }
+        .caption-toggle:hover { border-color:var(--border); color:var(--white); }
+        .caption-text { display:none; margin-top:8px; padding:10px 12px; background:var(--bg); border:1px solid var(--border2); border-radius:8px; font-size:11px; line-height:1.55; color:var(--dim); white-space:pre-wrap; word-break:break-word; max-height:300px; overflow-y:auto; font-family:var(--font); }
+        .caption-text.open { display:block; }
+
+        /* Freq row */
+        .freq-row { display:flex; align-items:center; gap:10px; font-size:12px; color:var(--dim); flex-wrap:wrap; }
+        .freq-row input[type="number"], .freq-row select { background:var(--bg); border:1px solid var(--border2); color:var(--white); border-radius:6px; padding:6px 10px; font-size:12px; }
 
         /* Images */
         .image-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:14px; }
@@ -503,12 +515,26 @@ function RecCard({ entry, onImage }) {
   const rec = entry.rec || {};
   const status = entry.status || 'queued';
   const isBuy = rec.action === 'BUY';
+  const [captionOpen, setCaptionOpen] = useState(false);
+
+  const exitBadge = rec.exitReason
+    ? <span className="status-pill" style={{
+        background: rec.exitReason === 'TARGET_HIT' ? 'rgba(0,230,118,0.12)' : 'rgba(255,23,68,0.12)',
+        color: rec.exitReason === 'TARGET_HIT' ? 'var(--buy)' : 'var(--sell)',
+      }}>{rec.exitReason === 'TARGET_HIT' ? '✅ TARGET HIT' : '🛑 SL HIT'}</span>
+    : null;
+
+  const targetLabel = rec.exitReason === 'TARGET_HIT' ? 'Exit (Target)'
+    : rec.exitReason === 'SL_HIT' ? 'Exit (SL Hit)' : 'Target';
+  const targetVal = rec.exitPrice != null ? rec.exitPrice : rec.target;
+
   return (
     <div className={`rec-card s-${status}`}>
       <div className="rec-top">
         <span className="ch-badge">{rec.channel || 'Unknown'}</span>
         <span className={`action-pill ${isBuy ? 'buy' : 'sell'}`}>{rec.action || '?'}</span>
         {rec.tradeType && <span className="type-pill">{rec.tradeType.toUpperCase()}</span>}
+        {exitBadge}
         <span className={`status-pill ${status}`}>{statusLabel(status)}</span>
       </div>
       <div className="rec-body">
@@ -516,7 +542,7 @@ function RecCard({ entry, onImage }) {
           <div className="stock-name">{rec.stock || 'Unknown'}</div>
           <div className="price-grid">
             <div className="price-cell entry"><div className="price-label">Entry</div><div className="price-val">₹{fmtPrice(rec.entry)}</div></div>
-            <div className="price-cell target"><div className="price-label">Target</div><div className="price-val">₹{fmtPrice(rec.target)}</div></div>
+            <div className="price-cell target"><div className="price-label">{targetLabel}</div><div className="price-val">₹{fmtPrice(targetVal)}</div></div>
             <div className="price-cell sl"><div className="price-label">Stop Loss</div><div className="price-val">₹{fmtPrice(rec.stopLoss)}</div></div>
           </div>
         </div>
@@ -525,7 +551,21 @@ function RecCard({ entry, onImage }) {
           : <div className="thumb-placeholder">{status === 'queued' || status === 'processing' ? 'Pending…' : '—'}</div>
         }
       </div>
+      {entry.caption && (
+        <div className="caption-block">
+          <button className="caption-toggle" onClick={() => setCaptionOpen(o => !o)}>
+            {captionOpen ? '📝 Hide Caption' : '📝 View Caption'}
+          </button>
+          <pre className={`caption-text${captionOpen ? ' open' : ''}`}>{entry.caption}</pre>
+        </div>
+      )}
       <div className="rec-footer">
+        {rec.analyst && <span className="analyst">👤 {rec.analyst}</span>}
+        {rec.returnPct != null && (
+          <span style={{color: rec.returnPct >= 0 ? 'var(--buy)' : 'var(--sell)'}}>
+            Return: {rec.returnPct >= 0 ? '+' : ''}{Number(rec.returnPct).toFixed(2)}%
+          </span>
+        )}
         <span className="time">{fmtTime(entry.time)}</span>
         {entry.error && <span style={{color:'var(--danger)',fontSize:10}}>{entry.error}</span>}
       </div>
@@ -542,6 +582,14 @@ function PrefsForm({ prefs, onSave, msg }) {
     setLocal(p => ({ ...p, tradeTypes: { ...p.tradeTypes, [type]: val } }));
   }
 
+  function setExitFilter(key, val) {
+    setLocal(p => ({ ...p, exitReasonFilter: { ...p.exitReasonFilter, [key]: val } }));
+  }
+
+  function setFreq(key, val) {
+    setLocal(p => ({ ...p, postingFrequency: { ...p.postingFrequency, [key]: val } }));
+  }
+
   function addChannel() {
     const val = channelInput.trim().toLowerCase().replace(/[\s-]/g, '_');
     if (val && !local.channels.includes(val)) {
@@ -556,6 +604,37 @@ function PrefsForm({ prefs, onSave, msg }) {
 
   return (
     <div style={{maxWidth:700}}>
+
+      {/* Trade Outcome Filter */}
+      <div className="pref-section">
+        <div className="pref-section-title">Trade Outcome Filter</div>
+        <div className="pref-section-desc">Control which closed trades trigger a post. Open trades are never posted.</div>
+        <div className="toggle-row">
+          <div>
+            <div className="toggle-label">Only post closed trades</div>
+            <div className="toggle-sublabel">Never post new/open trade recommendations — only post when target or SL is hit</div>
+          </div>
+          <label className="toggle-switch">
+            <input type="checkbox" checked={local.onlyClosedTrades !== false} onChange={e => setLocal(p => ({...p, onlyClosedTrades: e.target.checked}))} />
+            <span className="toggle-slider" />
+          </label>
+        </div>
+        <div style={{marginTop:12}}>
+          <div className="pref-section-desc" style={{marginBottom:8}}>Select which outcomes to post:</div>
+          <div className="pref-check-grid">
+            <label className="pref-check-item">
+              <input type="checkbox" checked={local.exitReasonFilter?.targetHit !== false} onChange={e => setExitFilter('targetHit', e.target.checked)} />
+              <div className="pref-check-label"><span>Target Hit</span><small>Post when trade reaches profit target</small></div>
+            </label>
+            <label className="pref-check-item">
+              <input type="checkbox" checked={local.exitReasonFilter?.slHit !== false} onChange={e => setExitFilter('slHit', e.target.checked)} />
+              <div className="pref-check-label"><span>Stop Loss Hit</span><small>Post when trade hits stop loss</small></div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      {/* Trade Type Filters */}
       <div className="pref-section">
         <div className="pref-section-title">Trade Type Filters</div>
         <div className="pref-section-desc">Only trades matching selected types will be posted to Instagram</div>
@@ -575,12 +654,13 @@ function PrefsForm({ prefs, onSave, msg }) {
         </div>
       </div>
 
+      {/* Posting Options */}
       <div className="pref-section">
         <div className="pref-section-title">Posting Options</div>
         <div>
           {[
             ['postToFeed',  'Post to Feed',  'Publish as a regular Instagram feed post'],
-            ['postToStory', 'Post as Story', 'Also publish as an Instagram Story (24-hour)'],
+            ['postToStory', 'Post as Story', 'Also publish as an Instagram Story (24-hour). Image includes TARGET HIT / STOP LOSS HIT banner.'],
           ].map(([key, label, sub]) => (
             <div key={key} className="toggle-row">
               <div><div className="toggle-label">{label}</div><div className="toggle-sublabel">{sub}</div></div>
@@ -593,11 +673,46 @@ function PrefsForm({ prefs, onSave, msg }) {
         </div>
       </div>
 
+      {/* Posting Frequency */}
+      <div className="pref-section">
+        <div className="pref-section-title">Posting Frequency (Feed Posts)</div>
+        <div className="pref-section-desc">Throttle how often feed posts are published. Stories are not affected by this cap.</div>
+        <div className="toggle-row">
+          <div><div className="toggle-label">Enable frequency cap</div><div className="toggle-sublabel">Limit how many feed posts go out per time period</div></div>
+          <label className="toggle-switch">
+            <input type="checkbox" checked={local.postingFrequency?.enabled === true} onChange={e => setFreq('enabled', e.target.checked)} />
+            <span className="toggle-slider" />
+          </label>
+        </div>
+        <div className="freq-row" style={{marginTop:14}}>
+          <label>Max posts:</label>
+          <input type="number" min="1" max="100" value={local.postingFrequency?.maxPosts ?? 1} onChange={e => setFreq('maxPosts', parseInt(e.target.value || '1', 10))} style={{width:60}} />
+          <label>per</label>
+          <select value={local.postingFrequency?.perUnit ?? 'hour'} onChange={e => setFreq('perUnit', e.target.value)}>
+            <option value="minute">Minute</option>
+            <option value="hour">Hour</option>
+            <option value="day">Day</option>
+          </select>
+        </div>
+      </div>
+
+      {/* Story Daily Limit */}
+      <div className="pref-section">
+        <div className="pref-section-title">Story Daily Limit</div>
+        <div className="pref-section-desc">Maximum number of Instagram Stories to post per calendar day. Resets at midnight.</div>
+        <div className="freq-row">
+          <label>Max stories per day:</label>
+          <input type="number" min="1" max="100" value={local.maxStoriesPerDay ?? 20} onChange={e => setLocal(p => ({...p, maxStoriesPerDay: parseInt(e.target.value || '20', 10)}))} style={{width:60}} />
+        </div>
+        <div style={{fontSize:11,color:'var(--dimmer)',marginTop:8}}>Recommended: 20 or fewer to avoid Instagram rate limiting on stories.</div>
+      </div>
+
+      {/* Channel Allowlist */}
       <div className="pref-section">
         <div className="pref-section-title">Channel Allowlist</div>
         <div className="pref-section-desc">Only trades from these TV channels will be posted</div>
         <div className="channel-tags">
-          {local.channels.map((c, i) => (
+          {(local.channels || []).map((c, i) => (
             <div key={i} className="ch-tag">
               {c}
               <button className="ch-tag-remove" onClick={() => removeChannel(i)}>×</button>

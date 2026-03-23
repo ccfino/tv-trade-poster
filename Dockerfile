@@ -43,7 +43,6 @@ COPY --from=deps /app/node_modules ./node_modules
 COPY package.json ./
 COPY src/ ./src/
 COPY assets/ ./assets/
-COPY public/ ./public/
 COPY scripts/ ./scripts/
 
 # Create directories the app expects
