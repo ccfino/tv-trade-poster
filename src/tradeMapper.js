@@ -15,6 +15,19 @@ const { classifyTrade } = require('./tradeClassifier');
  * advisorAccuracy: { totalTrades, positiveTrades, negativeTrades, accuracy, returns }
  */
 
+/**
+ * Normalize the raw exitReason string from the websocket into a known constant.
+ * The server sends lowercase free-form strings like "target", "stoploss",
+ * "price mismatch", etc. We map them to: TARGET_HIT, SL_HIT, or keep as-is.
+ */
+function normalizeExitReason(raw) {
+  if (!raw) return null;
+  const r = raw.toLowerCase().trim();
+  if (r === 'target' || r === 'target_hit' || r === 'target hit') return 'TARGET_HIT';
+  if (r === 'stoploss' || r === 'sl' || r === 'sl_hit' || r === 'sl hit' || r === 'stop loss') return 'SL_HIT';
+  return raw;   // "price mismatch", "period", "manual", etc. — pass through as-is
+}
+
 function normalizeTargets(raw) {
   if (!raw) return [];
   if (Array.isArray(raw)) return raw.filter(Boolean).map(Number);
@@ -84,10 +97,10 @@ function closedTradeToRec(trade, advisorAccuracy = null, advisorData = null) {
     // Override target to show exit price on the image card
     target:     exit ? [exit] : base.target,
     exitPrice:  exit,
-    exitReason: trade.exitReason,   // TARGET_HIT | SL_HIT | PERIOD | MANUAL | …
+    exitReason: normalizeExitReason(trade.exitReason),
     returnPct,
     isClosed:   true,
   };
 }
 
-module.exports = { tradeToRec, closedTradeToRec };
+module.exports = { tradeToRec, closedTradeToRec, normalizeExitReason };

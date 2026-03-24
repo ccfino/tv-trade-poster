@@ -1,6 +1,7 @@
 'use strict';
 const { get: getPrefs } = require('./preferences');
 const { classifyTrade }  = require('./tradeClassifier');
+const { normalizeExitReason } = require('./tradeMapper');
 
 function normalise(str) {
   return (str || '').toLowerCase().replace(/[\s_\-]/g, '');
@@ -18,11 +19,12 @@ function isAllowed(trade) {
   // Only post closed trades (target hit / SL hit) if preference is enabled
   if (prefs.onlyClosedTrades) {
     if (!trade.exitReason) return false;
+    const reason = normalizeExitReason(trade.exitReason);
     const erf = prefs.exitReasonFilter || {};
-    if (trade.exitReason === 'TARGET_HIT' && erf.targetHit === false) return false;
-    if (trade.exitReason === 'SL_HIT'     && erf.slHit     === false) return false;
-    // Block PERIOD / MANUAL exits (only allow TARGET_HIT and SL_HIT)
-    if (trade.exitReason !== 'TARGET_HIT' && trade.exitReason !== 'SL_HIT') return false;
+    if (reason === 'TARGET_HIT' && erf.targetHit === false) return false;
+    if (reason === 'SL_HIT'     && erf.slHit     === false) return false;
+    // Block other exits like "price mismatch", "period", "manual"
+    if (reason !== 'TARGET_HIT' && reason !== 'SL_HIT') return false;
   }
 
   return true;
