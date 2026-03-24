@@ -16,7 +16,7 @@
 const path = require('path');
 const logger = require('./logger');
 const { downloadImage, unlinkSafe } = require('./utils');
-const { generateImages } = require('./imageGenerator');
+const { generateImages, generateFrameOverlayImages } = require('./imageGenerator');
 const { convertToReel } = require('./reelConverter');
 const { postImage, postReel, postStory } = require('./instagramApi');
 const { buildCaption } = require('./captionBuilder');
@@ -86,14 +86,28 @@ async function processRecommendation(rec) {
     const prefs = preferences.get();
 
     if (rec.tvFrameImageUrl) {
-      // ── Fast path: use the frame_url directly ──────────────────────────
-      logger.info(`${label} Using frame_url directly: ${rec.tvFrameImageUrl}`);
-      appEvents.emit('images_generated', { stock: rec.stock, postPath: rec.tvFrameImageUrl, reelPath: null, caption });
+      // ── Frame path: download frame, overlay banner, post ─────────────
+      logger.info(`${label} Using frame_url: ${rec.tvFrameImageUrl}`);
+
+      const framePath = await downloadImage(rec.tvFrameImageUrl, TEMP_DIR);
+      if (!framePath) {
+        logger.error(`${label} Failed to download frame — skipping`);
+        appEvents.emit('post_failed', { stock: rec.stock, error: 'Frame download failed' });
+        return;
+      }
+      filesToClean.push(framePath);
+
+      // Generate feed (1080x1080) and story (1080x1920) with banner on frame
+      const { postPath, storyPath } = await generateFrameOverlayImages(rec, framePath, TEMP_DIR);
+      filesToClean.push(postPath, storyPath);
+      appEvents.emit('images_generated', { stock: rec.stock, postPath, reelPath: storyPath, caption });
 
       if (DRY_RUN) {
         logger.info(`${label} DRY RUN — skipping Instagram upload`);
-        logger.info(`  Frame URL : ${rec.tvFrameImageUrl}`);
-        appEvents.emit('dry_run', { stock: rec.stock, postPath: rec.tvFrameImageUrl, reelPath: null, caption });
+        logger.info(`  Post image  : ${postPath}`);
+        logger.info(`  Story image : ${storyPath}`);
+        appEvents.emit('dry_run', { stock: rec.stock, postPath, reelPath: storyPath, caption });
+        filesToClean.length = 0;
         return;
       }
 
@@ -107,9 +121,10 @@ async function processRecommendation(rec) {
         return;
       }
 
+      const postUrl = imageServer.toPublicUrl(postPath);
       let result = null;
       if (prefs.postToFeed) {
-        result = await postImage(rec.tvFrameImageUrl, caption);
+        result = await postImage(postUrl, caption);
         rateLimiter.recordPost();
         recentPostTimestamps.push(Date.now());
         logger.info(`${label} Image posted successfully. ID: ${result}`);
@@ -120,7 +135,8 @@ async function processRecommendation(rec) {
         const maxStories = prefs.maxStoriesPerDay != null ? prefs.maxStoriesPerDay : 20;
         if (rateLimiter.canPostStory(maxStories)) {
           try {
-            storyId = await postStory(rec.tvFrameImageUrl);
+            const storyUrl = imageServer.toPublicUrl(storyPath);
+            storyId = await postStory(storyUrl);
             rateLimiter.recordStory();
             logger.info(`${label} Story posted. ID: ${storyId}`);
             appEvents.emit('story_success', { stock: rec.stock, storyId });
@@ -133,7 +149,7 @@ async function processRecommendation(rec) {
       }
       performanceTracker.recordPost({
         stock: rec.stock, action: rec.action, channel: rec.channel,
-        tradeType: rec.tradeType, postId: result, storyId, imageUrl: rec.tvFrameImageUrl,
+        tradeType: rec.tradeType, postId: result, storyId, imageUrl: postUrl,
         exitReason: rec.exitReason,
       });
 

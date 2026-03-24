@@ -462,6 +462,77 @@ async function renderTemplateA(rec, tvFramePath, W, H) {
 }
 
 // ---------------------------------------------------------------------------
+// Frame overlay — draw outcome banner directly on the TV frame image
+// ---------------------------------------------------------------------------
+
+/**
+ * Render the TV frame with an outcome banner overlaid.
+ * @param {object} rec        - recommendation with exitReason, returnPct, isClosed
+ * @param {string} framePath  - local path to TV frame image
+ * @param {number} W          - canvas width  (1080)
+ * @param {number} H          - canvas height (1080 for feed, 1920 for story)
+ */
+async function renderFrameWithBanner(rec, framePath, W, H) {
+  const canvas = createCanvas(W, H);
+  const ctx = canvas.getContext('2d');
+
+  // Dark background
+  drawBackground(ctx, W, H);
+
+  const tvImg = await loadImage(framePath);
+  const imgW = tvImg.width;
+  const imgH = tvImg.height;
+
+  // Scale frame to fit width
+  const scale = W / imgW;
+  const drawW = W;
+  const drawH = Math.round(imgH * scale);
+
+  // Banner dimensions (calculated early so we can center frame+banner together)
+  const hasBanner = rec.isClosed && rec.exitReason &&
+    (rec.exitReason === 'TARGET_HIT' || rec.exitReason === 'SL_HIT');
+  const BANNER_GAP = 16;   // gap between frame and banner
+  const BANNER_H   = 72;
+  const totalContentH = drawH + (hasBanner ? BANNER_GAP + BANNER_H : 0);
+
+  const drawY = H === W
+    ? Math.round((H - totalContentH) / 2)         // feed: center frame+banner vertically
+    : Math.round((H - totalContentH) / 2);         // story: center frame+banner vertically
+
+  ctx.drawImage(tvImg, 0, drawY, drawW, drawH);
+
+  // Outcome banner
+  if (hasBanner) {
+    const isTarget    = rec.exitReason === 'TARGET_HIT';
+    const bannerText  = isTarget ? 'TARGET HIT' : 'STOP LOSS HIT';
+    const bgColor     = isTarget ? 'rgba(0,200,83,0.92)' : 'rgba(213,0,0,0.92)';
+    const BANNER_Y    = drawY + drawH + BANNER_GAP;
+
+    // Banner background
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, BANNER_Y, W, BANNER_H);
+
+    // Banner text
+    ctx.font = FONT.bold(34);
+    ctx.fillStyle = '#FFFFFF';
+    ctx.textAlign = 'center';
+
+    let label = bannerText;
+    if (rec.returnPct !== undefined && rec.returnPct !== null) {
+      const sign = rec.returnPct >= 0 ? '+' : '';
+      label += `  |  ${sign}${rec.returnPct.toFixed(2)}%`;
+    }
+    ctx.fillText(label, W / 2, BANNER_Y + 48);
+  }
+
+  // Watermark at bottom
+  drawWatermark(ctx, W, H);
+  drawCornerAccents(ctx, W, H);
+
+  return canvas;
+}
+
+// ---------------------------------------------------------------------------
 // Public API
 // ---------------------------------------------------------------------------
 
@@ -500,4 +571,33 @@ async function generateImages(rec, tvFramePath, outputDir) {
   return { postPath, reelPath };
 }
 
-module.exports = { generateImages };
+/**
+ * Generate feed + story images with the outcome banner overlaid on the TV frame.
+ * Used when posting closed trades that have a frame_url.
+ *
+ * @param {object} rec        - recommendation (must have exitReason, isClosed)
+ * @param {string} framePath  - local path to downloaded TV frame
+ * @param {string} outputDir  - where to save PNGs
+ * @returns {{ postPath: string, storyPath: string }}
+ */
+async function generateFrameOverlayImages(rec, framePath, outputDir) {
+  const ts = Date.now();
+  const slug = (rec.stock || 'trade').replace(/\s+/g, '_').toLowerCase();
+  const postPath  = path.join(outputDir, `${ts}_${slug}_frame_post.png`);
+  const storyPath = path.join(outputDir, `${ts}_${slug}_frame_story.png`);
+
+  logger.info(`Generating frame overlay images for: ${rec.stock} (${rec.exitReason})`);
+
+  const [postCanvas, storyCanvas] = await Promise.all([
+    renderFrameWithBanner(rec, framePath, 1080, 1080),
+    renderFrameWithBanner(rec, framePath, 1080, 1920),
+  ]);
+
+  fs.writeFileSync(postPath, postCanvas.toBuffer('image/png'));
+  fs.writeFileSync(storyPath, storyCanvas.toBuffer('image/png'));
+
+  logger.info(`Frame overlay images saved: post=${postPath}  story=${storyPath}`);
+  return { postPath, storyPath };
+}
+
+module.exports = { generateImages, generateFrameOverlayImages };
